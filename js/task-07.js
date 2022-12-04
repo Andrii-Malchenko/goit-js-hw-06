@@ -1,9 +1,7 @@
-const refs = {
-    inputFontSize: document.querySelector('#font-size-control'),
-    text: document.querySelector('#text'),
-};
-refs.text.style.fontSize = refs.inputFontSize.value + 'px';
 
-refs.inputFontSize.addEventListener('input', () => {
-    refs.text.style.fontSize = `${refs.inputFontSize.value}px`;
+const inputRef = document.querySelector("input#font-size-control");
+const spanRef = document.querySelector("span#text");
+
+inputRef.addEventListener("input", (event) => {
+  spanRef.style.fontSize = `${event.currentTarget.value}px`;
 });
